@@ -1,0 +1,90 @@
+//
+var text1 = "you are attractive Person";
+var text2 = "you are Selfish person";
+var text3 = "you are Kind hearted person";
+var text4 = "you are tempered Person";
+var text5 = "you are Stupid person";
+var text6 = "you are Intelegent";
+var text7 = "you are unpredicable";
+var text8 = "you are physically srong person";
+var text9 = "you are caring person";
+
+function validateinputs(){
+
+var age = document.getElementById('AGE').value;;
+if(age>100) {
+alert("age should be less than 100 to predict your character");
+}
+else{
+var age = document.getElementById('AGE').value;
+if (age==""){
+alert("age is mandatory, so Please enter your age to proceed");
+
+}
+var name = document.getElementById('Name').value ;
+if (name==""){
+alert("name is mandatory, so Please enter a name to proceed")
+
+}
+var DOB = document.getElementById('DOB').value ;
+if (DOB==""){
+alert("date of Birth is mandatory, so Please enter your date of Birth");
+
+}
+var FAVCOLOR = document.getElementById('FAVCOLOR').value ;
+var laptop = document.getElementById('laptop').value ;
+//var Car = document.getElementById('Car').value ;
+//var Home = document.getElementById('Home').value ;
+//var output = name+" " +DOB +" "+FAVCOLOR+" " +age;
+var output = ("Hi"+" "+name+" you are " + " " + age +" year old " +" and your date of birth is " + DOB +" and your favorite color is " + " " + FAVCOLOR) ;
+var input = DOB[9];
+//call customfeedback(input);
+//document.getElementById('output').innerHTML = output;
+//alert(output);
+//alert(input);
+
+var descforuser;
+if (input==1){
+descforuser=text1;
+}
+else if (input==2){
+descforuser=text2;
+}
+else if (input==3){
+descforuser1=text3;
+}
+else if (input==4){
+descforuser=text4;
+}
+else if (input==5){
+descforuser=text5;
+}
+else if (input==6){
+descforuser=text6;
+}
+else if (input==7){
+descforuser=text7;
+}
+else if (input==8){
+descforuser=text8;
+}
+else if (input==9){
+descforuser=text9;
+}
+else if (input==0){
+descforuser="you are too small to predit about your character";
+}
+if (name!="",age!="",DOB!="")
+alert(output + " " +descforuser + " please see the bottom yellow section for your character description " );
+document.getElementById('output').innerHTML = output + " so, " + descforuser ;
+}}
+
+//function agemandatory(){	
+//alert("age is mandatory, so Please enter your age to proceed");
+//}
+function namemandatory(){	
+alert("Name is mandatory, so Please enter your age to proceed");
+}
+function DOBmandatory(){	
+alert("date of birth is mandatory, so Please enter your age to proceed");
+}

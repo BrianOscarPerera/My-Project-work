@@ -1,0 +1,102 @@
+<!--Description of the project.
+This web page is designed predict users character based on his/her Birth day.
+depending on the birthnumber there will be predifined text and it will be displayed to user.
+when taking the user inputs, mandatory fields(Name,Date of Birth) are validated to make sure there kept blank, whereas optional fields(favourite colour , etc) are not validated 
+the Form has used in the web page to collect user data as inputs)
+once user is given the inputs, the user will be provided his character description.
+input types used are (radio,checkbox,text,number) and have used more than seven inputs.
+validation on onclick and onblur is used.
+Script function has used and external script is used 
+Samll image has also linked to the page as required.
+for Styling , the external CSS file is linked and there it have used class,id as reuired.
+inaddition to the stated requirement in this assignemnet hyperlink have also used to direct to other web site.
+The follwing files must be in one folder to execute the web page.
+
+index.html
+palm-reading-lede.jpg
+script.js
+style.css-->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>  
+   <meta charset="utf-8">
+   <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+   <title>Hello, world!</title>
+	
+	<link rel ="stylesheet" type = "text/css" href ="style.css"/>
+	<script type="text/javascript" src="script.js"></script>
+	
+
+	
+  </head>
+<body>
+<p>Hello there,<br>
+this web site is designed to predict your character based on your <strong>Name,Gender</strong> and your <strong>date of birth</strong>.<br>
+,So please provide your details under general information section below and click on validate inputs button to see our feedback at the bottom</p>
+
+<a href="https://www.the-astrology.com/welcome-p.php?r=MY_HGD_101456_R&gclid=EAIaIQobChMI1bSo3Or16wIVDoloCh24Lw8jEAEYASAAEgK4YfD_BwE">please click on this link to reach our web site for Premium users<a/>
+<br>
+<br>
+
+  
+<!--<div id="nav">
+<h1>Navigation</h1>
+	<ul>
+		<li>Home</li>
+		<li>About us</li>
+		<li>Contact us</li>
+		<li>FAQ</li>
+	</ul> 
+</div>-->
+
+<button id="button" onclick="validateinputs()" > Validate Inputs</button>
+
+ 
+<div id="container">	<form>
+	<h1>General Information</h1>
+	<label for="Name">Name:</label><input id="Name" type="text" onblur="namemandatory()" value="" name="name" required"/> <br> <br>
+	<label for="AGE">AGE:</label><input id="AGE" type="number" onblur="agemandatory()" value="" min="5" max="100" name="AGE" required"/> <br> <br>
+	<label for="DOB">Date of Birth:</label><input id="DOB" type="date" onblur="DOBmandatory()  "value="" name="DOB" required"/> <br> <br>	
+	<label for="FAVCOLOR">Favorite color:</label><input id="FAVCOLOR" type="text" value="" /> <br><br>
+
+	<div class="divisions1">
+		<div id="option">
+		<h2 class="h2">Gender</h2><br>
+		<label for="male">Male</label><input id="radiomale" type="radio" name="Brian" value="Male" checked="Brian"/><br> 
+		<label for="female">Female</label><input id="rediofemail" type="radio" name="Brian" value="female" /> <br><br>
+		
+		</div>
+		<div class="divisions2" id="checkbox">
+			<h2 class="h2">Tick what you have from the below</h2>
+			<label for="laptop">LAPTOP:</label><input id="laptop" type="checkbox" name="Brian" value="laptop" ="brian()" required="Brian"/><br>
+			<label for="Car">CAR:</label><input id="Car"type="checkbox" name="Brian" value="car"/> <br>
+			<label for="Home">HOME:</label><input id="Home"type="checkbox" name="Brian" value="home"><br><br>
+		</div>	
+			
+	</div>
+	</form>  <br>
+</div>
+
+<div class="divisions"> 
+<!--<label for="output" id ="label"> Your feedback for the inputs you entered</label>-->
+<p id="output"> Dear User if your data being validated successfully you will get the result for your horoscope here </p>
+</div>
+
+<!--<div class="otherdivisions"><table id="table">
+<tr><th>Name</th><td>AGE</td><td>Date of Birth</td></tr>
+<tr><td>Brian</td><td>37</td><td>19-AUG-1983</td></tr>
+<tr><td>Isuru</td><td>38</td><td>12-MAY-1981</td></tr>
+<tr><td>Amila</td><td>31</td><td>15-JUNE-1988</td></tr></div><br><br>-->
+
+
+
+  
+</body>
+ 
+</html>
